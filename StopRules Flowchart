@@ -1,0 +1,32 @@
+flowchart TD
+  A([Start: Request for support / engagement]) --> B{Role + scope clear?}
+  B -- No --> B1[State role + limits.\nOffer correct channel / referral.\nPause until clarified.] --> Z([Stop])
+  B -- Yes --> C{Consent + expectations set?}
+  C -- No --> C1[Ask permission.\nDefine goals + timebox.\nName what you can/can't do.] --> D
+  C -- Yes --> D{Any immediate safety risk\nor duty-to-act situation?}
+  
+  D -- Yes --> D1[Stop peer process.\nEscalate to appropriate emergency/clinical/support pathway.\nStay present only within scope.] --> Z
+  D -- No --> E{Coercion / pressure / manipulation\npresent (yours or theirs)?}
+  
+  E -- Yes --> E1[Name the pressure.\nReset boundaries.\nOffer choice.\nIf persists: transfer/end.] --> Z
+  E -- No --> F{Are you resourced to continue\n(calm, neutral, not activated)?}
+  
+  F -- No --> F1[Pause.\nName limits.\nOffer handoff / schedule / stop.\nNo "power through."] --> Z
+  F -- Yes --> G{Is the request asking for\ninterpretive authority?\n(e.g., diagnose, confirm delusion,\nmake meaning as fact)}
+  
+  G -- Yes --> G1[Stop meaning-engine.\nReturn to observable facts + lived experience.\nOffer grounding questions.\nIf insistence persists: transfer/end.] --> Z
+  G -- No --> H{Shared reality stable enough\nto proceed?}
+  
+  H -- No --> H1[Shift to stabilization mode:\n- slow pace\n- reflect feelings\n- orient to present\n- check basics\nIf destabilizing: escalate/stop.] --> Z
+  H -- Yes --> I{Best-fit support mode?}
+  
+  I --> I1[Mode 1: Practical support\n(next step, resources, planning)]
+  I --> I2[Mode 2: Relational support\n(witnessing, validation, connection)]
+  I --> I3[Mode 3: Skills support\n(grounding, communication, coping)]
+  
+  I1 --> J{Any stop-rule triggered\nduring work?}
+  I2 --> J
+  I3 --> J
+  
+  J -- Yes --> K[Name trigger.\nPause / transfer / end.\nDocument minimally if required.] --> Z
+  J -- No --> L[Close well:\nSummarize.\nConfirm next step.\nRe-state boundaries.\nInvite feedback.] --> M([Continue / Next session])
